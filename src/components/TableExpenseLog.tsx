@@ -72,13 +72,13 @@ export const TableExpenseLog: React.FC<TableExpenseLogProps> = ({
       <div className="app-card p-3 sm:p-4 flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
         {/* Search Input */}
         <div className="relative flex-1">
-          <Search className="w-4 h-4 text-[var(--text-muted)] absolute left-3 top-1/2 -translate-y-1/2" />
+          <Search className="w-4 h-4 text-[var(--text-muted)] absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none z-10" />
           <input
             type="text"
             placeholder="Search expenses..."
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
-            className="app-input pl-9 text-sm"
+            className="app-input !pl-10 text-sm"
           />
         </div>
 

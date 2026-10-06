@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #F7F5F0;
+    --bg-surface: #FFFFFF;
+    --bg-surface-hover: #F2EFE9;
+    --text-ink: #1F2421;
+    --text-muted: #6B7068;
+    --border-color: #E4E0D6;
+
+    --primary-main: #1F5F5B;
+    --primary-hover: #174845;
+    --primary-light: #EBF4F3;
+    --primary-text: #FFFFFF;
+
+    --accent-main: #C8643B;
+    --accent-light: #F9EFEA;
+
+    --positive-main: #2E7D4F;
+    --positive-bg: #EAF5EE;
+    --negative-main: #B3402E;
+    --negative-bg: #FBF0EE;
+  }
+
+  .dark {
+    --bg-main: #14181A;
+    --bg-surface: #1D2326;
+    --bg-surface-hover: #262E32;
+    --text-ink: #F2F0EB;
+    --text-muted: #9DA39A;
+    --border-color: #2D3538;
+
+    --primary-main: #369690;
+    --primary-hover: #45A8A2;
+    --primary-light: #183332;
+    --primary-text: #FFFFFF;
+
+    --accent-main: #DB774E;
+    --accent-light: #37231B;
+
+    --positive-main: #44C77C;
+    --positive-bg: #1B3526;
+    --negative-main: #E85B46;
+    --negative-bg: #381E1B;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Base custom utility styles */
+.app-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.app-btn-primary {
+  background-color: var(--primary-main);
+  color: var(--primary-text);
+  font-weight: 500;
+  border-radius: 6px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  transition: background-color 150ms ease;
+}
+.app-btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.app-input {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-ink);
+  border-radius: 6px;
+  min-height: 44px;
+  padding: 8px 12px;
+  width: 100%;
+}
+.app-input:focus {
+  outline: 2px solid var(--primary-main);
+  outline-offset: 1px;
+}
